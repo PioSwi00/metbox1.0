@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar class="custom-toolbar">
+    <ion-buttons slot="start">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+
+  <ion-grid class="ion-no-padding">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-md="6" size-lg="4">
+        <div class="welcome-message ion-text-center">
+          Twoje Zamówienia!
+        </div><br>
+
+        <ion-list *ngIf="products && products.length > 0" class="custom-ion-list">
+          <ng-container *ngFor="let product of products">
+            <ion-card class="custom-card">
+              <ion-card-header>
+                <ion-card-title class="name">{{ product.Name }}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-text color="medium" class="status">Status: {{ product.State }}</ion-text>
+                <ion-progress-bar [value]="getProgressBarValue(product.State)" color="primary"></ion-progress-bar>
+                <ion-button class="button" expand="full" href="#">
+                  Więcej szczegółów
+                </ion-button>
+              </ion-card-content>
+
+            </ion-card>
+          </ng-container>
+        </ion-list>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

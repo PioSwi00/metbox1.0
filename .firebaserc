@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "metbox-krp": {
+      "hosting": {
+        "app": [
+          "metbox-krp"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "metbox-krp"
+  }
+}

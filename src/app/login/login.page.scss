@@ -1,0 +1,47 @@
+// Stylowanie dla headera
+ion-header {
+  --ion-background-color: #007BFF; // Kolor tła
+  --ion-color-light: #fff; // Kolor tekstu
+}
+
+// Stylowanie dla toolbar
+ion-toolbar {
+  --background: transparent; // Przezroczysty toolbar
+}
+
+// Stylowanie dla tytułu
+ion-title {
+  font-size: 1.5rem; // Rozmiar tekstu
+}
+
+// Stylowanie dla contentu
+ion-content {
+  --ion-background-color: #f4f4f4; // Kolor tła contentu
+}
+
+// Stylowanie dla formularza
+form {
+  max-width: 300px; // Maksymalna szerokość formularza
+  margin: 0 auto; // Wyśrodkowanie formularza
+ --ion-bacground-color: #f4f4f4;
+}
+
+// Stylowanie dla inputów
+ion-input {
+  border-radius: 10px; // Zaokrąglenie krawędzi
+  --ion-background-color:#f4f4f4
+
+}
+
+// Stylowanie dla przycisków
+ion-button {
+  border-radius: 10px; // Zaokrąglenie krawędzi
+  --ion-bacground-color: #f4f4f4;
+}
+
+// Stylowanie dla przycisku z włączoną formą
+ion-button[expand="full"] {
+  width: calc(100% - 20px); // Mniejsza szerokość przycisku
+  margin-left: 10px; // Dodatkowy odstęp z lewej strony
+  margin-right: 10px; // Dodatkowy odstęp z prawej strony
+}

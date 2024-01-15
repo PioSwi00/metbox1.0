@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="credentials" (ngSubmit)="login()">
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="email"  placeholder="Email" formControlName='email'> </ion-input>
+      <ion-note slot="error" *ngIf="(email!.dirty||email!.touched)&&email?.errors">Email is invalid</ion-note>
+
+    </ion-item>
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="email"  placeholder="Password" formControlName='password'> </ion-input>
+      <ion-note slot="error" *ngIf="(password?.dirty||password?.touched)&&password?.errors">Password is invalid</ion-note>
+
+    </ion-item>
+    <ion-button type="submit" [disabled]="!credentials.valid">Login</ion-button>
+    <ion-button type="button" (click)="register()">Register</ion-button>
+  </form>
+
+
+
+</ion-content>
