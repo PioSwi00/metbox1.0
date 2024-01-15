@@ -5,6 +5,7 @@ import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { AngularFireDatabase} from '@angular/fire/compat/database';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -45,35 +46,45 @@ export class HomePage implements OnInit{
       const productsRef = this.db.list('/Produkty');
       productsRef.valueChanges().subscribe((products: any[]) => {
         console.log('All products:', products);
+    
         this.products = products.filter((product: any) => product.Owner === userUid);
-
-        // Usunięcie cudzysłowów z pól Name i State
+    
         this.products.forEach((product: any) => {
           product.Name = product.Name.replace(/["']/g, " ");
           product.State = product.State.replace(/["']/g, " ");
+    
+         
+          switch (product.State) {
+            case "Zamówienie Przyjęte":
+              product.ProgressBarValue = 20;
+              break;
+            case "Rozpoczęcie produkcji":
+              product.ProgressBarValue = 40;
+              break;
+            case "Produkcja":
+              product.ProgressBarValue = 60;
+              break;
+            case "Przygotowanie do wysłania":
+              product.ProgressBarValue = 80;
+              break;
+            case "Send":
+              product.ProgressBarValue = 100;
+              break;
+            default:
+              product.ProgressBarValue = 0;
+              break;
+          }
         });
-
+       
+    
         console.log('User products:', this.products);
       });
     }
+    
+    
 
-    getProgressBarValue(products: any[]): number {
-      const stateValues = ["Przyjęcie zamówienia", "Rozpoczęcie produkcji", "Produkcja", "Przygotowanie do wysłania", "Wysyłka"];
-      const totalStates = stateValues.length;
-
-      if (products && products.length > 0) {
-
-        const productState = products[0].state; // Assuming state is a property of the product object
-
-        const index = stateValues.indexOf(productState);
-        if (index !== -1) {
-          // Adding 1 to index and dividing by the total number of states to get the percentage
-          return ((index + 1) / totalStates) * 100;
-        }
-      }
-
-      // Return 0 or any default value if the state is not found or products array is empty
-      return 0;
+    navigateToProductDetails(productId: string) {
+      this.router.navigate(['/product-details', productId]);
     }
 
 

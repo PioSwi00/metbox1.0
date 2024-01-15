@@ -13,6 +13,7 @@ import {provideAuth,getAuth}from '@angular/fire/auth';
 import {provideStorage,getStorage}from '@angular/fire/storage';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
     provideDatabase(() => getDatabase()),
     provideStorage(() => getStorage()),
   ],
-  providers: [
+  providers: [ LocalNotifications,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
   ],

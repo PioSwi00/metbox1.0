@@ -1,25 +1,30 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login page</ion-title>
+<ion-header>
+  <ion-toolbar class="custom-toolbar">
+    <ion-title class="ion-text-center">
+      <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+        <ion-img src="assets/metbox-logo.png" alt="Metbox Logo" style="max-width: 260px; max-height: 90%; padding-bottom: 4%;padding-top: 4%;"></ion-img>
+      </div>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <form [formGroup]="credentials" (ngSubmit)="login()">
-    <ion-item fill="solid" class="ion-margin-bottom">
-      <ion-input type="email"  placeholder="Email" formControlName='email'> </ion-input>
-      <ion-note slot="error" *ngIf="(email!.dirty||email!.touched)&&email?.errors">Email is invalid</ion-note>
-
-    </ion-item>
-    <ion-item fill="solid" class="ion-margin-bottom">
-      <ion-input type="email"  placeholder="Password" formControlName='password'> </ion-input>
-      <ion-note slot="error" *ngIf="(password?.dirty||password?.touched)&&password?.errors">Password is invalid</ion-note>
-
-    </ion-item>
-    <ion-button type="submit" [disabled]="!credentials.valid">Login</ion-button>
-    <ion-button type="button" (click)="register()">Register</ion-button>
-  </form>
-
-
-
+  <ion-grid class="ion-no-padding">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-md="6" size-lg="4">
+        <form [formGroup]="credentials" (ngSubmit)="login()">
+          <ion-item fill="solid" class="ion-margin-bottom">
+            <ion-input type="email" placeholder="Email" formControlName='email'></ion-input>
+            <ion-note slot="error" *ngIf="(email!.dirty||email!.touched)&&email?.errors">Email is invalid</ion-note>
+          </ion-item>
+          <ion-item fill="solid" class="ion-margin-bottom">
+            <ion-input type="password" placeholder="Password" formControlName='password'></ion-input>
+            <ion-note slot="error" *ngIf="(password?.dirty||password?.touched)&&password?.errors">Password is invalid</ion-note>
+          </ion-item>
+          <ion-button type="submit" [disabled]="!credentials.valid">Login</ion-button>
+          <ion-button type="button" (click)="register()">Register</ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

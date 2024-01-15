@@ -5,6 +5,11 @@
         <ion-icon slot="icon-only" name="log-out"></ion-icon>
       </ion-button>
     </ion-buttons>
+    <ion-title class="ion-text-center">
+      <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+        <ion-img src="assets/metbox-logo.png" alt="Metbox Logo" style="max-width: 260px; max-height: 90%; padding-bottom: 10%;padding-top: 10%;"></ion-img>
+      </div>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -26,8 +31,11 @@
               </ion-card-header>
               <ion-card-content>
                 <ion-text color="medium" class="status">Status: {{ product.State }}</ion-text>
-                <ion-progress-bar [value]="getProgressBarValue(product.State)" color="primary"></ion-progress-bar>
-                <ion-button class="button" expand="full" href="#">
+                <ion-progress-bar [value]="product.ProgressBarValue/100" color="primary"></ion-progress-bar>
+
+
+
+                <ion-button class="button" expand="full" (click)="navigateToProductDetails()">
                   Więcej szczegółów
                 </ion-button>
               </ion-card-content>

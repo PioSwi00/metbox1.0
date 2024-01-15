@@ -1,47 +1,45 @@
-// Stylowanie dla headera
 ion-header {
-  --ion-background-color: #007BFF; // Kolor tła
-  --ion-color-light: #fff; // Kolor tekstu
+  --ion-background-color: #007BFF;
+  --ion-color-light: #fff;
 }
 
-// Stylowanie dla toolbar
 ion-toolbar {
-  --background: transparent; // Przezroczysty toolbar
+  --background: transparent;
 }
 
-// Stylowanie dla tytułu
 ion-title {
-  font-size: 1.5rem; // Rozmiar tekstu
+  font-size: 1.5rem;
 }
 
-// Stylowanie dla contentu
-ion-content {
-  --ion-background-color: #f4f4f4; // Kolor tła contentu
-}
-
-// Stylowanie dla formularza
 form {
-  max-width: 300px; // Maksymalna szerokość formularza
-  margin: 0 auto; // Wyśrodkowanie formularza
- --ion-bacground-color: #f4f4f4;
+  max-width: 300px;
+  margin: 50% auto 0; /* Dodany margines u góry */
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-// Stylowanie dla inputów
 ion-input {
-  border-radius: 10px; // Zaokrąglenie krawędzi
-  --ion-background-color:#f4f4f4
-
+  border-radius: 10px;
+  --ion-background-color: #f4f4f4;
 }
 
-// Stylowanie dla przycisków
 ion-button {
-  border-radius: 10px; // Zaokrąglenie krawędzi
-  --ion-bacground-color: #f4f4f4;
+  border-radius: 10px;
+  --ion-background-color: #f4f4f4;
 }
 
-// Stylowanie dla przycisku z włączoną formą
 ion-button[expand="full"] {
-  width: calc(100% - 20px); // Mniejsza szerokość przycisku
-  margin-left: 10px; // Dodatkowy odstęp z lewej strony
-  margin-right: 10px; // Dodatkowy odstęp z prawej strony
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+ion-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
 }

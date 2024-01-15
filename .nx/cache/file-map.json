@@ -11,6 +11,8 @@
     "@angular/platform-browser": "^17.0.2",
     "@angular/platform-browser-dynamic": "^17.0.2",
     "@angular/router": "^17.0.2",
+    "@capacitor/local-notifications": "^5.0.6",
+    "@ionic-native/local-notifications": "^5.36.0",
     "@ionic/angular": "^7.0.0",
     "firebase": "^10.7.1",
     "ionicons": "^7.0.0",
@@ -135,7 +137,7 @@
       },
       {
         "file": "src/app/home/home.page.html",
-        "hash": "13458975582049952193"
+        "hash": "6528757115737237691"
       },
       {
         "file": "src/app/home/home.page.scss",
@@ -147,7 +149,7 @@
       },
       {
         "file": "src/app/home/home.page.ts",
-        "hash": "9513228413820778884"
+        "hash": "11878810994930024813"
       },
       {
         "file": "src/app/login/login-routing.module.ts",
@@ -159,7 +161,7 @@
       },
       {
         "file": "src/app/login/login.page.html",
-        "hash": "10362746254630343190"
+        "hash": "682148663929723709"
       },
       {
         "file": "src/app/login/login.page.scss",

@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>product-details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ product.Name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ product.Name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Data zamówienia:</ion-label>
+        <ion-text>{{ product.OrderDate | date }}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label>Cena:</ion-label>
+        <ion-text>{{ product.Price | currency:'USD':'symbol' }}</ion-text>
+      </ion-item>
+      <!-- Dodaj inne pola zgodnie z potrzebami -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

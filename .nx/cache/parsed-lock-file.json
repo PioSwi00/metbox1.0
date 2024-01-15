@@ -1629,6 +1629,24 @@
         "hash": "sha512-+uarb83brBzPKN38NX1MkB6vb6+mwvR6amUulqAE7ccQw1pEl+bCia9TbdG1lsnFP7lZySvUn37CHyXQdfTwzg=="
       }
     },
+    "npm:@capacitor/core": {
+      "type": "npm",
+      "name": "npm:@capacitor/core",
+      "data": {
+        "version": "5.6.0",
+        "packageName": "@capacitor/core",
+        "hash": "sha512-xJhCOUGPHw0QYDA3YH+CmL6qiV9DH4Ij3yPxSenymjrtLuXI197u9ddCZwGEwgVIkh9kGZBBKzsNkn89SZ2gdQ=="
+      }
+    },
+    "npm:@capacitor/local-notifications": {
+      "type": "npm",
+      "name": "npm:@capacitor/local-notifications",
+      "data": {
+        "version": "5.0.6",
+        "packageName": "@capacitor/local-notifications",
+        "hash": "sha512-DB+ZBjv3Ri/0mtSzjMxLMHNGfg5m615ewDfQxp++mu7pYUM1RkxfSiigw73+PlZXDow1YNQJRlzTkwEKs6Pf+g=="
+      }
+    },
     "npm:@colors/colors": {
       "type": "npm",
       "name": "npm:@colors/colors",
@@ -2691,6 +2709,24 @@
         "hash": "sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA=="
       }
     },
+    "npm:@ionic-native/core": {
+      "type": "npm",
+      "name": "npm:@ionic-native/core",
+      "data": {
+        "version": "5.36.0",
+        "packageName": "@ionic-native/core",
+        "hash": "sha512-lOrkktadlKYbYf1LrDyAtsu1JnQ0oCCdkOU7iHQ8oXnNOkMwobFfD2m62F1CoOr0u9LIkpYnZSPjng8lZbmbNw=="
+      }
+    },
+    "npm:@ionic-native/local-notifications": {
+      "type": "npm",
+      "name": "npm:@ionic-native/local-notifications",
+      "data": {
+        "version": "5.36.0",
+        "packageName": "@ionic-native/local-notifications",
+        "hash": "sha512-X5grR2pJ8uLVyNeMB0NiErT/56y9623Tn01+WUVCGGIim+nc9oon8dPsuzj2RBbvssj7eKmBilq9Z04J8i72Qg=="
+      }
+    },
     "npm:@ionic/angular": {
       "type": "npm",
       "name": "npm:@ionic/angular",
@@ -3490,6 +3526,15 @@
         "version": "0.4.1",
         "packageName": "@types/cookie",
         "hash": "sha512-XW/Aa8APYr6jSVVA1y/DEIZX0/GMKLEVekNG727R8cs56ahETkRAy/3DR7+fJyh7oUgGwNQaRfXCun0+KbWY7Q=="
+      }
+    },
+    "npm:@types/cordova": {
+      "type": "npm",
+      "name": "npm:@types/cordova",
+      "data": {
+        "version": "11.0.3",
+        "packageName": "@types/cordova",
+        "hash": "sha512-kyuRQ40/NWQVhqGIHq78Ehu2Bf9Mlg0LhmSmis6ZFJK7z933FRfYi8tHe/k/0fB+PGfCf95rJC6TO7dopaFvAg=="
       }
     },
     "npm:@types/cors": {
@@ -14045,6 +14090,16 @@
       "type": "static"
     },
     {
+      "source": "npm:@capacitor/core",
+      "target": "npm:tslib",
+      "type": "static"
+    },
+    {
+      "source": "npm:@capacitor/local-notifications",
+      "target": "npm:@capacitor/core",
+      "type": "static"
+    },
+    {
       "source": "npm:@dabh/diagnostics",
       "target": "npm:colorspace",
       "type": "static"
@@ -15047,6 +15102,11 @@
     {
       "source": "npm:minimatch@3.1.2",
       "target": "npm:brace-expansion@1.1.11",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ionic-native/local-notifications",
+      "target": "npm:@ionic-native/core",
       "type": "static"
     },
     {

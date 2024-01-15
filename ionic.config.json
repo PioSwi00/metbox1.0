@@ -1,5 +1,7 @@
 {
   "name": "Metbox",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
