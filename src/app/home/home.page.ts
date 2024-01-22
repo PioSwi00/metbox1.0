@@ -46,14 +46,14 @@ export class HomePage implements OnInit{
       const productsRef = this.db.list('/Produkty');
       productsRef.valueChanges().subscribe((products: any[]) => {
         console.log('All products:', products);
-    
+
         this.products = products.filter((product: any) => product.Owner === userUid);
-    
+
         this.products.forEach((product: any) => {
           product.Name = product.Name.replace(/["']/g, " ");
           product.State = product.State.replace(/["']/g, " ");
-    
-         
+
+
           switch (product.State) {
             case "Zamówienie Przyjęte":
               product.ProgressBarValue = 20;
@@ -75,17 +75,13 @@ export class HomePage implements OnInit{
               break;
           }
         });
-       
-    
+
+
         console.log('User products:', this.products);
       });
     }
-    
-    
 
-    navigateToProductDetails(productId: string) {
-      this.router.navigate(['/product-details', productId]);
-    }
+
 
 
 
