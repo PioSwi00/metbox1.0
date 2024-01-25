@@ -13,16 +13,13 @@ ion-title {
 
 form {
   max-width: 300px;
-  margin: 50% auto 0; /* Dodany margines u góry */
+  margin: 50% auto 0;
   background-color: #f4f4f4;
   padding: 20px;
   border-radius: 10px;
 }
 
-ion-input {
-  border-radius: 10px;
-  --ion-background-color: #f4f4f4;
-}
+
 
 ion-button {
   border-radius: 10px;
@@ -42,4 +39,13 @@ ion-content {
   align-items: center;
   justify-content: center;
   background-color: #f4f4f4;
+}
+ion-input {
+  border-radius: 10px;
+  color: black !important;;
+  background-color: transparent !important;
+}
+
+ion-input::part(text-input) {
+  background-color: transparent !important;
 }

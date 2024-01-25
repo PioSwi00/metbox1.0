@@ -13,16 +13,17 @@
     <ion-row class="ion-justify-content-center">
       <ion-col size-md="6" size-lg="4">
         <form [formGroup]="credentials" (ngSubmit)="login()">
-          <ion-item fill="solid" class="ion-margin-bottom">
-            <ion-input type="email" placeholder="Email" formControlName='email'></ion-input>
-            <ion-note slot="error" *ngIf="(email!.dirty||email!.touched)&&email?.errors">Email is invalid</ion-note>
+          <ion-item class="ion-margin-bottom">
+            <ion-input label="Email" label-placement="floating" fill="solid" type="email" formControlName='email'></ion-input>
           </ion-item>
-          <ion-item fill="solid" class="ion-margin-bottom">
-            <ion-input type="password" placeholder="Password" formControlName='password'></ion-input>
+          <ion-item  class="ion-margin-bottom">
+            <ion-input type="password" label="Password"  label-placement="floating" fill="solid" formControlName='password'></ion-input>
             <ion-note slot="error" *ngIf="(password?.dirty||password?.touched)&&password?.errors">Password is invalid</ion-note>
           </ion-item>
           <ion-button type="submit" [disabled]="!credentials.valid">Login</ion-button>
+
           <ion-button type="button" (click)="register()">Register</ion-button>
+          <ion-button (click)="loginWithGoogle()">Login Google</ion-button>
         </form>
       </ion-col>
     </ion-row>

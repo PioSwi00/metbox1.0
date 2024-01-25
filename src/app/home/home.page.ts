@@ -45,7 +45,7 @@ export class HomePage implements OnInit{
     getProductsForUser(userUid: string) {
       const productsRef = this.db.list('/Produkty');
       productsRef.valueChanges().subscribe((products: any[]) => {
-        console.log('All products:', products);
+
 
         this.products = products.filter((product: any) => product.Owner === userUid);
 
@@ -80,7 +80,10 @@ export class HomePage implements OnInit{
         console.log('User products:', this.products);
       });
     }
-
+    showProductDetails(productName: string) {
+      console.log('Product Name:', productName);
+      this.router.navigateByUrl('/product-details/' + encodeURIComponent(productName));
+    }
 
 
 
