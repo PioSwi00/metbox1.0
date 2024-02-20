@@ -51,7 +51,7 @@ export class LoginPage implements OnInit {
     if(user){
       this.router.navigateByUrl('/home',{replaceUrl:true});
     }else{
-      this.showAlert('Registration failed', 'Try Again!')
+      this.showAlert('Rejestracja nieudana', 'Wprowadź poprawny email i hasło!')
     }
 
   }
@@ -77,7 +77,7 @@ export class LoginPage implements OnInit {
     if(user){
       this.router.navigateByUrl('/home',{replaceUrl:true});
     }else{
-      this.showAlert('Login failed', 'Try Again!')
+      this.showAlert('Login failed', 'Wprowadź dane logowania ponownie, lub jeśli nie masz konta, to wprowadź je po raz 1!')
     }
   }
   async showAlert(header:string,message:string){
